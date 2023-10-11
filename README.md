@@ -1,68 +1,20 @@
 # SummerIntern2023_D8AI
 
-D8AI(https://d8ai.com/) is an AI solution provider in Taiwan that provides businesses with custom chatbots. As an intern in the R&D department, I developed 2 APIs for D8AI:
-
-One of the APIs generates an Excel file of question-and-answer sets from a PDF of qualitative about the client. The pdf may include information on their official website, their workers' manual, and experiences from customer service. After running the API, an Excel of QA sets with 1Q to 1A would be created.
-
-After a manual inspection of the quality of the 1Q1A data set, the Excel file could be put into the other API for an expansion on the questions. The API would generate questions based on the answer and question provided. The questions would either be based on a section of the answer that has not been asked or a simple grammatical variation of the existing question.
-
-By creating the two programs, D8AI and its clients would no longer need to spend time coming up with questions one by one. Now, the program would provide a first draft, and workers would only need to make changes to the original document.
+D8AI(https://d8ai.com/) is an AI solution provider in Taiwan that provides businesses with custom chatbots. As an intern in the R&D department, I developed 2 APIs for D8AI, aiming to improve their client's experience in producing a chatbot. By creating the two programs, D8AI and its clients would no longer need to spend time coming up with questions one by one. Now, the program would provide a first draft, and workers would only need to make changes to the original document. While D8AI mainly supports local middle to small businesses in Taiwan, the product was prompted based on Traditional Mandarin. Therefore, comments in English and Mandarin are added in order to easier understanding of the code.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The file, _Initial_Generation_1Q1A_問題集從無到有_API_ver_, is the initial generation of question-and-answer sets from quantitative data provided by the client, usually in PDF format. The pdf would include most if not everything they want the custom robot to answer, including contents from official websites, workers' manuals, and personal experience. After running the API, an Excel of QA sets with 1Q to 1A would be created.
+
+The other file, _chatgpt_1q_to_multiple_q-11_API_ver_, is a program that could be used after the generation of the 1Q1A dataset to improve its performance. In this program, number of questions linking to an answer would be increased. The number of questions would be increased based on two factors. First, if there are any parts or keywords included in the answer that the existing question fails to cover, the program will come up with additional questions. Secondly, if there are no additional questions that could be made based on content, more questions would be generated based on semantics. In this case, questions that have the same meaning but with different grammatical structures would be generated.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+* OpenAI Developer account: As the programs implemented chat3.5 from OpenAI, a secured API key would be needed.
+* Traditional Chinese Dataset Only: As the program is specifically prompted for Taiwanese businesses, the prompt is based on the language most commonly used there.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* Abby Fan: abby040325@gmail.com
